@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int x[]={8,9,16,21,48,88};
+int y[]={100,99,75,66,45,22,10};
+int z[13];
+int s1=6,s2=7,a,b,c,i;
+
+for(a=0,b=s2-1,c=0;a<s1&&b>=0;)
+{
+	if(x[a]<y[b])
+	{
+		z[c]=x[a];
+		a++;
+		c++;
+	}
+	else if(x[a]>y[b])
+	{
+		z[c]=y[b];
+		b--;
+		c++;
+	}
+}
+while(a<s1)
+{
+	z[c]=x[a];
+	c++;
+	a++;
+}
+while(b>=0)
+{
+	z[c]=y[b];
+	c++;
+	b--;
+}
+printf("After Sort\n");
+for(i=0;i<=12;i++)
+{
+	printf("%d ",z[i]);
+}
+getch();
+}
